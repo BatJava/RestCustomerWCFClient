@@ -27,7 +27,7 @@ namespace RestCustomerClient1
            "http://localhost:49972/CustomerService.svc/customers/";
         //public static int nextID = 0;
         static void Main(string[] args)
-        {
+        {    
             //GET all customers
             IList<Customer> cList = GetCustomersAsync().Result;
             Console.WriteLine(string.Join("\n", cList.ToString()));
@@ -105,7 +105,6 @@ namespace RestCustomerClient1
             for (int i = 0; i < cList.Count; i++)
                 Console.WriteLine(cList[i].ToString());
             Console.WriteLine();        
-
         }
 
         private static async Task<IList<Customer>> GetCustomersAsync()
