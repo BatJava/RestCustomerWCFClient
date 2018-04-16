@@ -239,7 +239,7 @@ namespace RestCustomerClient1
             {
                 string content = await client.GetStringAsync(CustomersUri);
                 IList<Customer> cList = JsonConvert.DeserializeObject<IList<Customer>>(content);
-                
+                //test
                 for (int i = 0; i < cList.Count; i++)
                     Console.WriteLine(cList[i].ToString());
                 Console.WriteLine();
